@@ -1,5 +1,4 @@
 #include <string>
-
 class Turista
 {
 public: 
@@ -10,4 +9,7 @@ private:
     std::string ci;
     std::string nombre;
     std::string email;
+
+public:
+    std::string getCi() { return ci; }
 };
