@@ -1,14 +1,17 @@
 #include <string>
+#include <set>
 #include "Data/DTFecha.h"
 #include "Data/DTExperiencia.h"
+
+class Turista; 
+
 
 class Experiencia
 {
 public:
-    Experiencia();
-    ~Experiencia();
+    Experiencia(std::string cod, std::string desc, int precio, DTFecha f);
+    virtual ~Experiencia();
 
-    // Variables privadas y funciones
 private:
     std::string codigoReserva;
     std::string descripcion;
@@ -16,10 +19,8 @@ private:
     DTFecha fecha;
     std::set<Turista*> colTuristas;
 
-    // Getters y Setters
 public:
     std::string getCodigoReserva() { return codigoReserva; }
     DTExpe getDT();
     virtual float calcularCosto() = 0;
 };
-
