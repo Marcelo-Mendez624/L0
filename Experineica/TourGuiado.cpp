@@ -1,6 +1,6 @@
 #include "TourGuiado.h"
 
-TourGuiado::TourGuiado(int cod,std::string des, int precio, DTFecha fecha std::string a,std::set<std::string> set_lugares): DTExp(cod,des,precio,fecha){
+TourGuiado::TourGuiado(int cod,std::string des, int precio, DTFecha fecha, std::string a,std::set<std::string> set_lugares): DTExp(cod,des,precio,fecha){
   this->agencia=a;
   this->lugaresVisitados=set_lugares;
 }
