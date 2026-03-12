@@ -1,4 +1,4 @@
 
-#include EventoCultural.h
+#include "EventoCultural.h"
 
 EventoCultural::EventoCultural() {}
