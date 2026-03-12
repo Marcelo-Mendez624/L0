@@ -1,10 +1,18 @@
 #include <iostream>
 #include <list>
 #include <map>
-#include "Experiencia.h"
-#include "Turista.h"
-#include "Data/Regimen.h"
+#include <string>
+#include <set>
 
+#include "Turista.h"
+
+// EXPERIENCIAS
+#include "Experiencia.h"
+#include "Alojamiento.h"
+
+//  DATA TYPES
+#include "DTFecha.h"
+#include "Data/Regimen.h"
 std::list<Experiencia*> experiencias;
 std::map<std::string, Experiencia*> map_experiencias;
 
@@ -39,9 +47,6 @@ void parte_a()
 {
 	class Alojamiento alojamiento1("ALX5489", "Hotel moderno", 30, "18/05/2020", "Hotel Lindorf", 
 		AllInclusive, 5);
-
-	class Alojamiento alojamiento2("ALJ4789", "Todas las habitaciones con vista al mar", 100, "10/02/2025", "Hotel SeaView", 
-		MediaPension, 15);
 }
 
 void parte_b(){
