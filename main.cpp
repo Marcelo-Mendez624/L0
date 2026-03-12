@@ -45,8 +45,19 @@ Experiencia* coleccion_getExperiencia(std::string codigoReserva){
 
 void parte_a()
 {
-	class Alojamiento alojamiento1("ALX5489", "Hotel moderno", 30, "18/05/2020", "Hotel Lindorf", 
-		AllInclusive, 5);
+	Alojamiento* alojamiento1 = new Alojamiento(
+    "ALX5489", 
+    "Hotel moderno", 
+    30, 
+    DTFecha(18, 5, 2020), 
+    "Hotel Lindorf", 
+    AllInclusive, 
+    5
+);
+
+	Alojamiento* alojamiento2 = new Alojamiento("ALJ4789", "Todas las habitaciones con vista al mar", 100, "10/02/2025", "Hotel SeaView", 
+	MediaPension, 15);
+
 }
 
 void parte_b(){
