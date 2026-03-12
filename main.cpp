@@ -54,7 +54,10 @@ void parte_a()
     AllInclusive, 
     5
 );
-}
+
+	Alojamiento* alojamiento2 = new Alojamiento("ALJ4789", "Todas las habitaciones con vista al mar", 100, "10/02/2025", "Hotel SeaView", 
+	MediaPension, 15);
+	}
 
 void parte_b(){
 }
