@@ -13,6 +13,8 @@
 //  DATA TYPES
 #include "DTFecha.h"
 #include "Data/Regimen.h"
+
+
 std::list<Experiencia*> experiencias;
 std::map<std::string, Experiencia*> map_experiencias;
 
@@ -45,19 +47,16 @@ Experiencia* coleccion_getExperiencia(std::string codigoReserva){
 
 void parte_a()
 {
-	Alojamiento* alojamiento1 = new Alojamiento(
-    "ALX5489", 
-    "Hotel moderno", 
-    30, 
-    DTFecha(18, 5, 2020), 
-    "Hotel Lindorf", 
-    AllInclusive, 
-    5
-);
+	std::string codigo1 = "ALX5489";
+	std::string desc = "Hotel moderno";
+	std::string name = "Hotel Lindorf";
 
-	Alojamiento* alojamiento2 = new Alojamiento("ALJ4789", "Todas las habitaciones con vista al mar", 100, "10/02/2025", "Hotel SeaView", 
-	MediaPension, 15);
-	}
+	DTFecha miFecha(18, 5, 2020);
+
+	TipoRegimen miRegimen = TipoRegimen::AllInclusive;
+
+	Alojamiento* alojamiento1 = new Alojamiento(codigo1, desc, 30, miFecha, name, miRegimen, 5);
+}
 
 void parte_b(){
 }

@@ -3,6 +3,6 @@
 
 EventoCultural::EventoCultural() {}
 
-EventoCultural::EventoCultural() {}
+EventoCultural::~EventoCultural() {}
 
 float EventoCultural::calcularCosto{}

@@ -1,9 +1,14 @@
 #include "Experiencia.h"
 #include "Turista.h"
 
-Experiencia::Experiencia()
+Experiencia::Experiencia(std::string cod, std::string desc, int precio, DTFecha f) 
+    : 
+    codigoReserva(cod),
+    descripcion(desc),
+    precioBase(precio),
+    fecha(f) 
 {
-
+    
 }
 
 Experiencia::~Experiencia()
