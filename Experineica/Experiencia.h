@@ -13,5 +13,7 @@ private:
     // Getters y Setters
 public:
     std::string getCodigoReserva() { return CodigoReserva; }
+
+    float calcularCosto();
 };
 
