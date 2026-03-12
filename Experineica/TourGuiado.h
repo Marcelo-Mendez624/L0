@@ -5,7 +5,6 @@ class TourGuiado: public Experiencia{
   std::string agencia;
   std::set<std::string> lugaresVisitados;
 
-  
   public:
   TourGuiado(std::string,std::set<std::string>);
   ~TourGuiado();
