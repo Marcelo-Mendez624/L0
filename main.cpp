@@ -39,6 +39,9 @@ void parte_a()
 {
 	class Alojamiento alojamiento1("ALX5489", "Hotel moderno", 30, "18/05/2020", "Hotel Lindorf", 
 		AllInclusive, 5);
+
+	class Alojamiento alojamiento2("ALJ4789", "Todas las habitaciones con vista al mar", 100, "10/02/2025", "Hotel SeaView", 
+		MediaPension, 15);
 }
 
 void parte_b(){
