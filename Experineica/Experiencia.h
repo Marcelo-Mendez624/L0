@@ -19,7 +19,7 @@ private:
     // Getters y Setters
 public:
     std::string getCodigoReserva() { return codigoReserva; }
-    DTExpe getExperiencia();
+    DTExpe getDT();
     virtual float calcularCosto() = 0;
 };
 

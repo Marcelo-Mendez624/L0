@@ -11,7 +11,7 @@ Experiencia::~Experiencia()
 
 }
 
-DTExpe Experiencia::getExperiencia() {
+DTExpe Experiencia::getDT() {
     std::set<std::string> setTuristas;
 
     std::set<Turista*>::iterator it;
