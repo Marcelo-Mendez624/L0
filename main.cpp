@@ -1,10 +1,18 @@
 #include <iostream>
 #include <list>
 #include <map>
-#include "Experiencia.h"
-#include "Turista.h"
-#include "Data/Regimen.h"
+#include <string>
+#include <set>
 
+#include "Turista.h"
+
+// EXPERIENCIAS
+#include "Experiencia.h"
+#include "Alojamiento.h"
+
+//  DATA TYPES
+#include "DTFecha.h"
+#include "Data/Regimen.h"
 std::list<Experiencia*> experiencias;
 std::map<std::string, Experiencia*> map_experiencias;
 
@@ -37,8 +45,15 @@ Experiencia* coleccion_getExperiencia(std::string codigoReserva){
 
 void parte_a()
 {
-	class Alojamiento alojamiento1("ALX5489", "Hotel moderno", 30, "18/05/2020", "Hotel Lindorf", 
-		AllInclusive, 5);
+	Alojamiento* alojamiento1 = new Alojamiento(
+    "ALX5489", 
+    "Hotel moderno", 
+    30, 
+    DTFecha(18, 5, 2020), 
+    "Hotel Lindorf", 
+    AllInclusive, 
+    5
+);
 }
 
 void parte_b(){
