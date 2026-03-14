@@ -10,8 +10,13 @@ class EventoCultural : public Experiencia {
 
     public:
 
-        float calcularCosto () override;    
+        float calcularCosto () override;  
+        
+        //getters
+        bool getCupon(); 
+        std::string getUbicacion(); 
 
+        //constructor/destructor
         EventoCultural();
         ~EventoCultural();
 

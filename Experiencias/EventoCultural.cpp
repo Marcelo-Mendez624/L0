@@ -5,11 +5,23 @@ EventoCultural::EventoCultural() {}
 
 EventoCultural::~EventoCultural() {}
 
-float EventoCultural::calcularCosto{
+bool EventoCultural::getCupon(){
+    return this->usoCupon;
+}
 
-    int cantTuristas = colTuristas.size();
+std::string EventoCultural::getUbicacion(){
+    return this->ubicacion;
+}
 
+
+float EventoCultural::calcularCosto() {
+
+    DTExpe exp = this->getDT();
+    
+    int cantTuristas = exp.getTuristas().size();
+    int precioBase= this->getPrecioBase();
     float costo = precioBase * cantTuristas;
+    bool usoCupon = this->getCupon();
 
     if (usoCupon) {
         costo -= 5 * cantTuristas;
