@@ -7,8 +7,13 @@ EventoCultural::~EventoCultural() {}
 
 float EventoCultural::calcularCosto{
 
-    int precio_base = this->precioBase;
+    int cantTuristas = colTuristas.size();
+
+    float costo = precioBase * cantTuristas;
+
+    if (usoCupon) {
+        costo -= 5 * cantTuristas;
+    }
     
-
-
+    return costo;
 }
