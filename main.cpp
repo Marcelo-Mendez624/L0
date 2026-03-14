@@ -72,7 +72,34 @@ void parte_a()
 }
 
 void parte_b(){
+  // primer objeto de TourGuiado
+    std::string codigo="TGO4657";
+    std::string des="Plazas de Montevideo";
+    std::string agencia="Paseos SA";
+
+    DTFecha fecha1(28,8,2024);
   
+    std::set<std::string> lugaresVisitados;
+    lugaresVisitados.insert("Plaza Independencia");
+    lugaresVisitados.insert("Plaza Matriz");
+  
+    TourGuiado* tour1= new TourGuiado(codigo,des,10,fecha1,agencia,lugaresVisitados);
+
+  //segundo objeto de TourGuiado
+    codigo="TGR3257";
+    des="Puntos emblematicos";
+    agencia="Recorre";
+
+    DTFecha fecha2(29,8,2024);
+  
+    lugaresVisitados.clear();
+    lugaresVisitados.insert("Puerta de la Ciudadela");
+    lugaresVisitados.insert("Mausoleo");
+    lugaresVisitados.insert("Cabildo");
+    lugaresVisitados.insert("Palacio Salvo");
+
+    TourGuiado* tour2=new TourGuiado(codigo,des,5,fecha2,agencia,lugaresVisitados);
+
 }
 
 void parte_c(){
