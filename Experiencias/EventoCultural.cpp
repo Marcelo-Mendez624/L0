@@ -6,8 +6,11 @@ EventoCultural::EventoCultural() {}
 EventoCultural::~EventoCultural() {}
 
 bool EventoCultural::getCupon(){
-
     return this->usoCupon;
+}
+
+std::string EventoCultural::getUbicacion(){
+    return this->ubicacion;
 }
 
 
