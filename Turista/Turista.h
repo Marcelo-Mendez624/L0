@@ -1,10 +1,9 @@
 #include <string>
+#include <Experiencias/Experiencia.h>
 
 
 class Turista
 {
-public: 
-
 private:
     std::string ci;
     std::string nombre;
@@ -28,4 +27,7 @@ public:
     //Misc
     std::string toString();
     std::set<std::string> listarExperiencias(desde: DTFecha, min: float, max: float);
+
+protected:
+    std::set<Experiencia*> colExperiencias;     //Pseudoatributo/link
 };

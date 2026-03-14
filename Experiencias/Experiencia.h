@@ -17,7 +17,7 @@ protected:
     std::string descripcion;
     int precioBase;
     DTFecha fecha;
-    std::set<Turista*> colTuristas;
+    std::set<Turista*> colTuristas;     //Pseudoatributo/link
 
 public:
     std::string getCodigoReserva() { return codigoReserva; }
