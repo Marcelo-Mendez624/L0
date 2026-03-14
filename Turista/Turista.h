@@ -27,5 +27,5 @@ public:
 
     //Misc
     std::string toString();
-    std::set<> listarExperiencias(desde: DTFecha, min: float, max: float);
+    std::set<std::string> listarExperiencias(desde: DTFecha, min: float, max: float);
 };
