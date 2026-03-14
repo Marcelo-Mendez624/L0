@@ -47,7 +47,8 @@ Experiencia* coleccion_getExperiencia(std::string codigoReserva){
 
 void parte_a()
 {
-	std::string codigo1 = "ALX5489";
+  //primer objeto de Alojamiento
+	std::string codigo = "ALX5489";
 	std::string desc = "Hotel moderno";
 	std::string name = "Hotel Lindorf";
 
@@ -55,10 +56,23 @@ void parte_a()
 
 	TipoRegimen miRegimen = TipoRegimen::AllInclusive;
 
-	Alojamiento* alojamiento1 = new Alojamiento(codigo1, desc, 30, miFecha, name, miRegimen, 5);
+	Alojamiento* alojamiento1 = new Alojamiento(codigo, desc, 30, miFecha, name, miRegimen, 5);
+
+   //segundo objeto de Alojamiento
+   codigo="ALJ4789";
+   desc="Todas las habitaciones con vista al mar";
+   name= "Hotel SeaView";
+
+  
+   DTFecha miFecha2(10, 2, 2025);
+  
+   miRegimen= MediaPension;
+   
+   Alojamiento* alojamiento2= new Alojamiento(codigo,desc,100, miFecha2,name, miRegimen, 15);
 }
 
 void parte_b(){
+  
 }
 
 void parte_c(){
