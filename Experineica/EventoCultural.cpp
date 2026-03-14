@@ -5,4 +5,10 @@ EventoCultural::EventoCultural() {}
 
 EventoCultural::~EventoCultural() {}
 
-float EventoCultural::calcularCosto{}
+float EventoCultural::calcularCosto{
+
+    int precio_base = this->precioBase;
+    
+
+
+}

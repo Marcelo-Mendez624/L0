@@ -15,5 +15,11 @@ Alojamiento::~Alojamiento()
 }
 
 float Alojamiento::calcularCosto() {
-    return 0.0;
+    float costo = precioBase * cantNoches;
+
+    if (regimen == AllInclusive) {
+        costo += 10 * cantNoches;
+    }
+
+    return costo;
 }
