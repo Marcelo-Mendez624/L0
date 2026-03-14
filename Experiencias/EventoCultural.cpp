@@ -19,7 +19,7 @@ float EventoCultural::calcularCosto() {
     DTExpe exp = this->getDT();
     
     int cantTuristas = exp.getTuristas().size();
-    int precioBase= this->getPrecioBase();
+    int precioBase= this->precioBase;
     float costo = precioBase * cantTuristas;
     bool usoCupon = this->getCupon();
 
