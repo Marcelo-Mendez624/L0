@@ -1,7 +1,19 @@
 
 #include "EventoCultural.h"
 
-EventoCultural::EventoCultural() {}
+EventoCultural::EventoCultural(
+    std::string cod,
+    std::string desc,
+    int precio,
+    DTFecha fecha,
+    std::string ubic,
+    bool cupon
+): Experiencia(cod, desc, precio, fecha) {
+    
+    this->ubicacion = ubic;
+    this->usoCupon = cupon;
+
+}
 
 EventoCultural::~EventoCultural() {}
 
@@ -12,7 +24,6 @@ bool EventoCultural::getCupon(){
 std::string EventoCultural::getUbicacion(){
     return this->ubicacion;
 }
-
 
 float EventoCultural::calcularCosto() {
 

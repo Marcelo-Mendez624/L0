@@ -17,7 +17,15 @@ class EventoCultural : public Experiencia {
         std::string getUbicacion(); 
 
         //constructor/destructor
-        EventoCultural();
+        EventoCultural(
+            std::string cod,
+            std::string desc,
+            int precio,
+            DTFecha fecha,
+            std::string ubic,
+            bool cupon
+        );
+
         ~EventoCultural();
 
 };
