@@ -12,7 +12,7 @@ public:
     Experiencia(std::string cod, std::string desc, int precio, DTFecha f);
     virtual ~Experiencia();
 
-private:
+protected:
     std::string codigoReserva;
     std::string descripcion;
     int precioBase;
