@@ -23,4 +23,5 @@ public:
     std::string getCodigoReserva() { return codigoReserva; }
     DTExpe getDT();
     virtual float calcularCosto() = 0;
+    friend std::ostream& operator<<(std::ostream& os, const Punto& p);
 };
