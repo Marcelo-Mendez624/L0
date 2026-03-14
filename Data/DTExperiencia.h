@@ -2,7 +2,7 @@
 #include <set>
 #include "DTFecha.h"
 
-static class DTExpe {
+class DTExpe {
 private:
     std::string codigoReserva;
     std::string descripcion;
