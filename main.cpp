@@ -103,6 +103,12 @@ void parte_b(){
 }
 
 void parte_c(){
+  std::string codigo="ECP1346";
+  std::string des="Danza en el Solis";
+  DTFecha fecha(29,10,2025);
+  std::string ubicacion="Teatro Solis";
+
+  EventoCultural* evento=new EventoCultural(codigo,des,10,fecha,ubicacion,true);
 }
 
 void parte_d(){
