@@ -1,5 +1,5 @@
 #include <string>
-#include <Experiencias/Experiencia.h>
+#include <../Experiencias/Experiencia.h>
 
 
 class Turista
@@ -11,7 +11,7 @@ private:
 
 public:
     //Constructor y destructor
-    class Turista Turista(std::string ci; std::string nombre; std::string email);
+    Turista(std::string ci, std::string nombre, std::string email);
     ~Turista();
 
     //Getters
