@@ -58,6 +58,8 @@ void parte_a()
 
 	Alojamiento* alojamiento1 = new Alojamiento(codigo, desc, 30, miFecha, name, miRegimen, 5);
 
+  coleccion_guardarExperiencia(alojamiento1);
+
    //segundo objeto de Alojamiento
    codigo="ALJ4789";
    desc="Todas las habitaciones con vista al mar";
@@ -69,6 +71,9 @@ void parte_a()
    miRegimen= MediaPension;
    
    Alojamiento* alojamiento2= new Alojamiento(codigo,desc,100, miFecha2,name, miRegimen, 15);
+
+   coleccion_guardarExperiencia(alojamiento2);
+
 }
 
 void parte_b(){
@@ -85,6 +90,8 @@ void parte_b(){
   
     TourGuiado* tour1= new TourGuiado(codigo,des,10,fecha1,agencia,lugaresVisitados);
 
+    coleccion_guardarExperiencia(tour1);
+
   //segundo objeto de TourGuiado
     codigo="TGR3257";
     des="Puntos emblematicos";
@@ -100,6 +107,7 @@ void parte_b(){
 
     TourGuiado* tour2=new TourGuiado(codigo,des,5,fecha2,agencia,lugaresVisitados);
 
+    coleccion_guardarExperiencia(tour2);
 }
 
 void parte_c(){
@@ -109,6 +117,8 @@ void parte_c(){
   std::string ubicacion="Teatro Solis";
 
   EventoCultural* evento=new EventoCultural(codigo,des,10,fecha,ubicacion,true);
+
+  coleccion_guardarExperiencia(evento);
 }
 
 void parte_d(){
