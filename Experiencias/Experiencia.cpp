@@ -1,5 +1,7 @@
 #include "Experiencia.h"
 #include "Turista.h"
+#include <iostream>
+#include <ostream>
 
 Experiencia::Experiencia(std::string cod, std::string desc, int precio, DTFecha f) 
     : 
@@ -29,14 +31,34 @@ DTExpe Experiencia::getDT() {
     return DTExpe(this->codigoReserva, this->descripcion, this->fecha, setTuristas);
 }
 
-std::ostream& operator<<(std::ostream& os, const Experiencia& exp)
+std::ostream& operator<<(std::ostream& os, Experiencia& exp)
 {
     //Traemos DTExpe desde la experiencia exp
     DTExpe DT = exp.getDT();
+    DTFecha fecha = DT.getFecha();
 
     //codigoReserva->descripcion(fecha)/
-    os << DT.getCodigoReserva() << "->" << DT.getDescripcion() << "("
-       << DT.getFecha() << ")/";
+    /*os << DT.getCodigoReserva() << "->" << DT.getDescripcion() << "("
+       << DT.getFecha() << ")/";*/
+
+    os << DT.getCodigoReserva();
+    std::string aux = "->";
+    os << aux << DT.getDescripcion();
+    aux = "(";
+    os << aux;
+    aux = fecha.getDia();
+    os << aux;
+    aux = "/";
+    os << aux;
+    aux = fecha.getMes();
+    os << aux;
+    aux = "/";
+    os << aux;
+    aux = fecha.getAnio();
+    os << aux;
+    aux = ")/";
+    os << aux;
+
     
     //Inicializamos iterador MILANESAAAAAAAAAAAAAAAA
     std::set<std::string>::iterator milanesa;
