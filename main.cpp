@@ -152,7 +152,22 @@ void parte_f(){
 }
 
 void parte_g(){
-	
+	Turista *t1 = map_turistas["4.951.278-9"];	// Vanesa Castro
+	Turista *t2 = map_turistas["1.535.442-0"];	// Karen Santos
+
+	Experiencia *exp1 = map_experiencias["ALX5489"];	// Para Vanesa Castro
+	Experiencia *exp2 = map_experiencias["ALJ4789"];	// Para Vanesa Castro
+	Experiencia *exp3 = map_experiencias["TGR3257"];	// Para Vanesa Castro
+	Experiencia *exp4 = map_experiencias["ECP1346"];	// Para Vanesa Castro
+	Experiencia *exp5 = map_experiencias["TGO4657"];	// Para Karen Santos
+	Experiencia *exp6 = map_experiencias["TGR3257"];	// Para Karen Santos
+
+	(t1->getExperiencias()).insert(exp1);
+	(t1->getExperiencias()).insert(exp2);
+	(t1->getExperiencias()).insert(exp3);
+	(t1->getExperiencias()).insert(exp4);
+	(t2->getExperiencias()).insert(exp5);
+	(t2->getExperiencias()).insert(exp6);
 }
 
 void parte_h(){
