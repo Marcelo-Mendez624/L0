@@ -29,7 +29,7 @@ DTExpe Experiencia::getDT() {
     return DTExpe(this->codigoReserva, this->descripcion, this->fecha, setTuristas);
 }
 
-std::ostream &operator<<(std::ostream& os, const Experiencia& exp)
+std::ostream& operator<<(std::ostream& os, const Experiencia& exp)
 {
     //Traemos DTExpe desde la experiencia exp
     DTExpe DT = exp.getDT();
@@ -42,10 +42,13 @@ std::ostream &operator<<(std::ostream& os, const Experiencia& exp)
     std::set<std::string>::iterator milanesa;
 
     //Iteramos cada elemento del conjunto turistas, agregamos a os y agregamos la coma
-    for(milanesa = DT.turistas.begin(); milanesa <= DT.turistas.end(); milanesa++)
+    for(milanesa = DT.turistas.begin(); milanesa != DT.turistas.end(); milanesa++)
     {
-        os << milanesa.getNombre();
-        if (milanesa++ != DT.turistas.end())
+        os << (*milanesa);
+
+        std::set<std::string>::iterator sig = milanesa;
+        sig++;
+        if (sig != DT.turistas.end())
             os << ",";
     }
 
