@@ -26,7 +26,7 @@ public:
 
     //Misc
     std::string toString();
-    std::set<std::string> listarExperiencias(desde: DTFecha, min: float, max: float);
+    std::set<std::string> listarExperiencias(DTFecha desde, float min, float max);
 
 protected:
     std::set<Experiencia*> colExperiencias;     //Pseudoatributo/link
