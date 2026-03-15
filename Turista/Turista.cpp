@@ -35,6 +35,11 @@ std::set<std::string> Turista::listarExperiencias(DTFecha desde, float min, floa
             int anioFecha = fecha.getAnio();
             int mesFecha = fecha.getMes();
             int diaFecha = fecha.getDia();
+
+            if ((anioDesde < anioFecha) ||
+                anioDesde == anioFecha && (mesDesde < mesFecha ||
+                (mesDesde == mesFecha && diaDesde < diaFecha)))
+                    res.insert((*papafrita)->getCodigoReserva());
         }
     }
 }
