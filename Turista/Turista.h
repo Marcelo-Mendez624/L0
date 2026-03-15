@@ -9,6 +9,9 @@ private:
     std::string nombre;
     std::string email;
 
+protected:
+    std::set<Experiencia*> colExperiencias;     //Pseudoatributo/link
+
 public:
     //Constructor y destructor
     Turista(std::string ci, std::string nombre, std::string email);
@@ -18,6 +21,7 @@ public:
     std::string getCi() { return ci; }
     std::string getNombre() { return nombre; }
     std::string getEmail() { return email; }
+    std::set<Experiencia*> getExperiencias() { return colExperiencias; }
 
     //Setters
     void setCi(std::string ci) { this->ci = ci; }
@@ -27,7 +31,4 @@ public:
     //Misc
     std::string toString();
     std::set<std::string> listarExperiencias(DTFecha desde, float min, float max);
-
-protected:
-    std::set<Experiencia*> colExperiencias;     //Pseudoatributo/link
 };
