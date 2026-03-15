@@ -63,14 +63,15 @@ std::ostream& operator<<(std::ostream& os, Experiencia& exp)
     //Inicializamos iterador MILANESAAAAAAAAAAAAAAAA
     std::set<std::string>::iterator milanesa;
 
+    std::set<std::string> turistas;
     //Iteramos cada elemento del conjunto turistas, agregamos a os y agregamos la coma
-    for(milanesa = DT.turistas.begin(); milanesa != DT.turistas.end(); milanesa++)
+    for(milanesa = turistas.begin(); milanesa != turistas.end(); milanesa++)
     {
         os << (*milanesa);
 
         std::set<std::string>::iterator sig = milanesa;
         sig++;
-        if (sig != DT.turistas.end())
+        if (sig != turistas.end())
             os << ",";
     }
 
