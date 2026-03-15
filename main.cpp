@@ -112,15 +112,37 @@ void parte_c(){
 }
 
 void parte_d(){
+
+	// Iterador para listas
+	std::list<Experiencia*>::iterator pure;
+	
+	for (pure = experiencias.begin(); pure != experiencias.end(); pure++) {
+		std::cout << **pure << std::endl;
+	}
 }
 
 void parte_e(){
+	Turista *t1;
+	Turista *t2;
+
+	t1 = new Turista("4.951.278-9", "Vanesa Castro", "vcastro.uy@servidor.net");
+	t2 = new Turista("1.535.442-0", "Karen Santos", "karen.s89@internet.uy");
+
+	coleccion_guardarTurista(t1);
+	coleccion_guardarTurista(t2);
 }
 
 void parte_f(){
+
+	std::list<Turista*>::iterator bondiola;
+
+	for (bondiola = turistas.begin(); bondiola != turistas.end(); bondiola++) {
+		std::cout << (*bondiola)->toString() << std::endl;
+	}
 }
 
 void parte_g(){
+	
 }
 
 void parte_h(){
