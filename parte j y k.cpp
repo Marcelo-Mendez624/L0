@@ -1,6 +1,7 @@
 void parte_j(){
+   Turista*t = coleccion_getTurista("1.535.422-0");
    DTFecha fecha(10,12,2023);
-   std::set<std::string> lista_exp= listarExperiencias(fecha,0,1000);
+   std::set<std::string> t->lista_exp= listarExperiencias(fecha,0,1000);
   //Iterador de listas
    std::set<std::string>::iterator it;
 
