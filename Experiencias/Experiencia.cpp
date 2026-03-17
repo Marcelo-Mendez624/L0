@@ -43,7 +43,7 @@ std::ostream& operator<<(std::ostream& os, const DTExpe& dt) {
     
     std::set<std::string>::const_iterator milanesa;
 
-    // agregar turistas 
+    // agregar turistas milanesa es un turista 
     for(milanesa = turistas.begin(); milanesa != turistas.end(); milanesa++) {
         os << (*milanesa);
 
