@@ -162,12 +162,13 @@ void parte_g(){
 	Experiencia *exp5 = map_experiencias["TGO4657"];	// Para Karen Santos
 	Experiencia *exp6 = map_experiencias["TGR3257"];	// Para Karen Santos
 
-	(t1->getExperiencias()).insert(exp1);
-	(t1->getExperiencias()).insert(exp2);
-	(t1->getExperiencias()).insert(exp3);
-	(t1->getExperiencias()).insert(exp4);
-	(t2->getExperiencias()).insert(exp5);
-	(t2->getExperiencias()).insert(exp6);
+	//cambio aca, cambie a agregarExperiencia para no modificar desde el getter, es peligroso en si
+	(t1->agregarExperiencia(exp1));
+	(t1->agregarExperiencia(exp2));
+	(t1->agregarExperiencia(exp3));
+	(t1->agregarExperiencia(exp4));
+	(t2->agregarExperiencia(exp5));
+	(t2->agregarExperiencia(exp6));
 }
 
 void parte_h(){
