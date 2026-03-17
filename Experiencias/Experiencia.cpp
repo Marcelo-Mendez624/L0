@@ -31,48 +31,28 @@ DTExpe Experiencia::getDT() {
     return DTExpe(this->codigoReserva, this->descripcion, this->fecha, setTuristas);
 }
 
-std::ostream& operator<<(std::ostream& os, Experiencia& exp)
-{
-    //Traemos DTExpe desde la experiencia exp
-    DTExpe DT = exp.getDT();
-    DTFecha fecha = DT.getFecha();
+std::ostream& operator<<(std::ostream& os, const DTExpe& dt) {
+    DTFecha fecha = dt.getFecha();
 
-    //codigoReserva->descripcion(fecha)/
-    /*os << DT.getCodigoReserva() << "->" << DT.getDescripcion() << "("
-       << DT.getFecha() << ")/";*/
+    // Estructura
+    // codigoReserva->descripcion(fecha) /
+    os << dt.getCodigoReserva() << "->" << dt.getDescripcion() << " ("
+       << fecha.getDia() << "/" << fecha.getMes() << "/" << fecha.getAnio() << ")/";
 
-    os << DT.getCodigoReserva();
-    std::string aux = "->";
-    os << aux << DT.getDescripcion();
-    aux = "(";
-    os << aux;
-    aux = fecha.getDia();
-    os << aux;
-    aux = "/";
-    os << aux;
-    aux = fecha.getMes();
-    os << aux;
-    aux = "/";
-    os << aux;
-    aux = fecha.getAnio();
-    os << aux;
-    aux = ")/";
-    os << aux;
-
+    std::set<std::string> turistas = dt.getTuristas();
     
-    //Inicializamos iterador MILANESAAAAAAAAAAAAAAAA
-    std::set<std::string>::iterator milanesa;
+    std::set<std::string>::const_iterator milanesa;
 
-    std::set<std::string> turistas;
-    //Iteramos cada elemento del conjunto turistas, agregamos a os y agregamos la coma
-    for(milanesa = turistas.begin(); milanesa != turistas.end(); milanesa++)
-    {
+    // agregar turistas 
+    for(milanesa = turistas.begin(); milanesa != turistas.end(); milanesa++) {
         os << (*milanesa);
 
-        std::set<std::string>::iterator sig = milanesa;
+        std::set<std::string>::const_iterator sig = milanesa;
         sig++;
-        if (sig != turistas.end())
-            os << ",";
+        
+        if (sig != turistas.end()) {
+            os << ", ";
+        }
     }
 
     return os;
