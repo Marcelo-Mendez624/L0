@@ -189,16 +189,17 @@ void parte_i(){
 
 	Experiencia* exp = coleccion_getExperiencia("TGR3257");
 
-	std::list<Turista*>::iterator it;
+	if (exp != NULL){
+		std::list<Turista*>::iterator it;
 
-	for (it=turistas.begin();it!=turistas.end(); ++it) {
-		(*it)->eliminarExperiencia(exp);
+		for (it=turistas.begin();it!=turistas.end(); ++it) {
+			(*it)->eliminarExperiencia(exp);
+		}
+
+		coleccion_eliminarExperiencia(exp);
+		delete exp;
 	}
-
-	coleccion_eliminarExperiencia(exp);
-	delete exp;
 }
-
 
 void parte_j(){
 }
