@@ -34,8 +34,6 @@ public:
     //Misc
     std::string toString();
     std::set<std::string> listarExperiencias(DTFecha desde, float min, float max);
-
-    //para no romper encapsulamiento
     void agregarExperiencia(Experiencia* exp);
     void eliminarExperiencia(Experiencia* exp);
 };

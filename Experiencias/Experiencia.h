@@ -4,7 +4,7 @@
 #include <string>
 #include <set>
 #include "../Data/DTFecha.h"
-#include "../Data/DTExperiencia.h"
+#include "../Data/DTExpe.h"
 
 class Turista;                          //Definida en Turista.h
 
@@ -29,6 +29,8 @@ public:
     //Misc
     virtual float calcularCosto() = 0;
     friend std::ostream& operator<<(std::ostream& os, const DTExpe& exp);
+    void agregarTurista(Turista* turista);
+    void eliminarTurista(Turista* turista);
 };
 
 #endif

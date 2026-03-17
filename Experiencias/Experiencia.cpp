@@ -31,4 +31,12 @@ DTExpe Experiencia::getDT() {
     return DTExpe(this->codigoReserva, this->descripcion, this->fecha, setTuristas);
 }
 
+void Experiencia::agregarTurista(Turista *turista)
+{
+    colTuristas.insert(turista);
+}
 
+void Experiencia::eliminarTurista(Turista *turista)
+{
+    colTuristas.insert(turista);
+}
