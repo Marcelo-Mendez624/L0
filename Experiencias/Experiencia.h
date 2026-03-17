@@ -1,3 +1,6 @@
+#ifndef EXPERIENCIA_H
+#define EXPERIENCIA_H
+
 #include <string>
 #include <set>
 #include "Data/DTFecha.h"
@@ -25,3 +28,5 @@ public:
     virtual float calcularCosto() = 0;
     friend std::ostream& operator<<(std::ostream& os, const Experiencia& exp);
 };
+
+#endif

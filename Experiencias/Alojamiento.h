@@ -1,6 +1,9 @@
+#ifndef ALOJAMIENTO_H
+#define ALOJAMIENTO_H
+
 #include <string>
 #include "Experiencia.h"
-#include "Data/Regimen.h"
+// #include "Data/Regimen.h"
 
 class Alojamiento : public Experiencia 
 {
@@ -19,3 +22,5 @@ public:
 
     virtual float calcularCosto();
 };
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef DTEXPERIENCIA_H
+#define DTEXPERIENCIA_H
+
 #include <string>
 #include <set>
 #include "DTFecha.h"
@@ -16,3 +19,5 @@ public:
     DTFecha getFecha() const;
     std::set<std::string> getTuristas() const;
 };
+
+#endif

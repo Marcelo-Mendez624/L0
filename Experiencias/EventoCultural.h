@@ -1,4 +1,8 @@
+#ifndef EVENTOCULTURAL_H
+#define EVENTOCULTURAL_H
+
 #include "Experiencia.h"
+#include "../Data/DTFecha.h"
 #include <string>
 
 class EventoCultural : public Experiencia {
@@ -29,3 +33,5 @@ class EventoCultural : public Experiencia {
         ~EventoCultural();
 
 };
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef TOURGUIADO_H
+#define TOURGUIADO_H
+
 #include "Experiencia.h"
 
 class TourGuiado: public Experiencia{
@@ -11,3 +14,5 @@ class TourGuiado: public Experiencia{
   std::string getAgencia();
   virtual float calcularCosto();
 };
+
+#endif
