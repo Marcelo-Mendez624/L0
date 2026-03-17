@@ -6,6 +6,8 @@
 #include "Data/DTFecha.h"
 #include "Data/DTExperiencia.h"
 
+class Turista;                          //Definida en Turista.h
+
 class Experiencia
 {
 protected:
