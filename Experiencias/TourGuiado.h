@@ -9,16 +9,6 @@ private:
     std::string agencia;
     std::set<std::string> lugaresVisitados;
 
-<<<<<<< HEAD
-  public:
-  TourGuiado(std::string,std::string,int,DTFecha,std::string,std::set<std::string>);
-  ~TourGuiado();
-  std::string getAgencia();
-  virtual float calcularCosto();
-};
-
-#endif
-=======
 public:
     //Constructor y destructor
     TourGuiado(std::string,std::string,int,DTFecha,std::string,std::set<std::string>);
@@ -30,4 +20,3 @@ public:
     //Misc
     virtual float calcularCosto();
 };
->>>>>>> refs/remotes/origin/main

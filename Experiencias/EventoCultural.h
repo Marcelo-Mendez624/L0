@@ -27,32 +27,6 @@ public:
     bool getCupon(); 
     std::string getUbicacion(); 
 
-<<<<<<< HEAD
-    public:
-
-        float calcularCosto () override;  
-        
-        //getters
-        bool getCupon(); 
-        std::string getUbicacion(); 
-
-        //constructor/destructor
-        EventoCultural(
-            std::string cod,
-            std::string desc,
-            int precio,
-            DTFecha fecha,
-            std::string ubic,
-            bool cupon
-        );
-
-        ~EventoCultural();
-
-};
-
-#endif
-=======
     //Misc
     float calcularCosto () override;  
 };
->>>>>>> refs/remotes/origin/main

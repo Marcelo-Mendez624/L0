@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 #ifndef DTFECHA_H
 #define DTFECHA_H
 
-class DTFecha {
-=======
 class DTFecha
 {
->>>>>>> refs/remotes/origin/main
 private:
     int dia;
     int mes;
