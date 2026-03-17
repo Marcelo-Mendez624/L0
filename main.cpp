@@ -172,10 +172,33 @@ void parte_g(){
 }
 
 void parte_h(){
+	
+	Turista*t = coleccion_getTurista("4.951.278-9");
+	DTFecha desde(10,12, 2023);
+
+	std::set<std::string> res = t->listarExperiencias(desde, 0, 1000);
+	
+	std::map<std::string>::iterator it;
+	
+	for(it=res.begin();it!=res.end();++it){
+		 std::cout << *it << std::endl;
+	}
 }
 
 void parte_i(){
+
+	Experiencia* exp = coleccion_getExperiencia("TGR3257");
+
+	std::list<Turista*>::iterator it;
+
+	for (it=turistas.begin();it!=turistas.end(); ++it) {
+		(*it)->eliminarExperiencia(exp);
+	}
+
+	coleccion_eliminarExperiencia(exp);
+	delete exp;
 }
+
 
 void parte_j(){
 }
