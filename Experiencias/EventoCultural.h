@@ -5,13 +5,29 @@
 #include "../Data/DTFecha.h"
 #include <string>
 
-class EventoCultural : public Experiencia {
+class EventoCultural : public Experiencia
+{
+private:
+    std::string ubicacion;
+    bool usoCupon;
 
-    private:
+public:
+    //Constructor y destructor
+    EventoCultural(
+        std::string cod,
+        std::string desc,
+        int precio,
+        DTFecha fecha,
+        std::string ubic,
+        bool cupon
+    );
+    ~EventoCultural();
 
-        std::string ubicacion;
-        bool usoCupon;
+    //Getters
+    bool getCupon(); 
+    std::string getUbicacion(); 
 
+<<<<<<< HEAD
     public:
 
         float calcularCosto () override;  
@@ -35,3 +51,8 @@ class EventoCultural : public Experiencia {
 };
 
 #endif
+=======
+    //Misc
+    float calcularCosto () override;  
+};
+>>>>>>> refs/remotes/origin/main

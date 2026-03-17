@@ -9,8 +9,8 @@ class Turista
 {
 private:
     std::string ci;
-    std::string nombre;
     std::string email;
+    std::string nombre;
 
 protected:
     std::set<Experiencia*> colExperiencias;     //Pseudoatributo/link
@@ -22,14 +22,14 @@ public:
 
     //Getters
     std::string getCi() { return ci; }
-    std::string getNombre() { return nombre; }
     std::string getEmail() { return email; }
+    std::string getNombre() { return nombre; }
     std::set<Experiencia*> getExperiencias() { return colExperiencias; }
 
     //Setters
     void setCi(std::string ci) { this->ci = ci; }
-    void setNombre(std::string nombre) { this->nombre = nombre; }
     void setEmail(std::string email) { this->email = email; }
+    void setNombre(std::string nombre) { this->nombre = nombre; }
 
     //Misc
     std::string toString();
