@@ -129,7 +129,7 @@ void parte_d(){
 	std::list<Experiencia*>::iterator pure;
 	
 	for (pure = experiencias.begin(); pure != experiencias.end(); pure++) {
-		std::cout << **pure << std::endl;
+		std::cout << *pure << std::endl;
 	}
 }
 
@@ -222,7 +222,7 @@ void parte_k(){
    std::list<Experiencia*>::iterator it;
 	
 	for (it = experiencias.begin(); it != experiencias.end(); it++) {
-		std::cout << *((*it)->getDT()) << std::endl;
+		std::cout << (*it)->getDT() << std::endl;
 	}
 }
 

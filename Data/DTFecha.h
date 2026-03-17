@@ -10,6 +10,7 @@ private:
 
 public:
     //Constructor
+    DTFecha();
     DTFecha(int d, int m, int a);
 
     //Getters

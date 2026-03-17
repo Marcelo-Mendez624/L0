@@ -31,29 +31,4 @@ DTExpe Experiencia::getDT() {
     return DTExpe(this->codigoReserva, this->descripcion, this->fecha, setTuristas);
 }
 
-std::ostream& operator<<(std::ostream& os, const DTExpe& dt) {
-    DTFecha fecha = dt.getFecha();
 
-    // Estructura
-    // codigoReserva->descripcion(fecha) /
-    os << dt.getCodigoReserva() << "->" << dt.getDescripcion() << " ("
-       << fecha.getDia() << "/" << fecha.getMes() << "/" << fecha.getAnio() << ")/";
-
-    std::set<std::string> turistas = dt.getTuristas();
-    
-    std::set<std::string>::const_iterator milanesa;
-
-    // agregar turistas milanesa es un turista 
-    for(milanesa = turistas.begin(); milanesa != turistas.end(); milanesa++) {
-        os << (*milanesa);
-
-        std::set<std::string>::const_iterator sig = milanesa;
-        sig++;
-        
-        if (sig != turistas.end()) {
-            os << ", ";
-        }
-    }
-
-    return os;
-}
