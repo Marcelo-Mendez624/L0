@@ -1,31 +1,28 @@
 #include "Experiencia.h"
 #include <string>
 
-class EventoCultural : public Experiencia {
+class EventoCultural : public Experiencia
+{
+private:
+    std::string ubicacion;
+    bool usoCupon;
 
-    private:
+public:
+    //Constructor y destructor
+    EventoCultural(
+        std::string cod,
+        std::string desc,
+        int precio,
+        DTFecha fecha,
+        std::string ubic,
+        bool cupon
+    );
+    ~EventoCultural();
 
-        std::string ubicacion;
-        bool usoCupon;
+    //Getters
+    bool getCupon(); 
+    std::string getUbicacion(); 
 
-    public:
-
-        float calcularCosto () override;  
-        
-        //getters
-        bool getCupon(); 
-        std::string getUbicacion(); 
-
-        //constructor/destructor
-        EventoCultural(
-            std::string cod,
-            std::string desc,
-            int precio,
-            DTFecha fecha,
-            std::string ubic,
-            bool cupon
-        );
-
-        ~EventoCultural();
-
+    //Misc
+    float calcularCosto () override;  
 };

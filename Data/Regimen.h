@@ -1,4 +1,5 @@
-enum TipoRegimen {
+enum TipoRegimen
+{
     AllInclusive,
     MediaPension
 };

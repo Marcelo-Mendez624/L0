@@ -3,25 +3,25 @@
 #include "Data/DTFecha.h"
 #include "Data/DTExperiencia.h"
 
-class Turista; 
-
-
 class Experiencia
 {
-public:
-    Experiencia(std::string cod, std::string desc, int precio, DTFecha f);
-    virtual ~Experiencia();
-
 protected:
-    std::string codigoReserva;
-    std::string descripcion;
-    int precioBase;
     DTFecha fecha;
+    int precioBase;
+    std::string descripcion;
+    std::string codigoReserva;
     std::set<Turista*> colTuristas;     //Pseudoatributo/link
 
 public:
-    std::string getCodigoReserva() { return codigoReserva; }
+    //Constructor y destructor
+    Experiencia(std::string cod, std::string desc, int precio, DTFecha f);
+    virtual ~Experiencia();
+
+    //Getters
     DTExpe getDT();
+    std::string getCodigoReserva() { return codigoReserva; }
+
+    //Misc
     virtual float calcularCosto() = 0;
     friend std::ostream& operator<<(std::ostream& os, const Experiencia& exp);
 };
