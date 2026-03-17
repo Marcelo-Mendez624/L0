@@ -43,3 +43,12 @@ std::set<std::string> Turista::listarExperiencias(DTFecha desde, float min, floa
         }
     }
 }
+
+//para no romper encapsulamiento
+void Turista::agregarExperiencia(Experiencia* exp) {
+    colExperiencias.insert(exp);
+}
+
+void Turista::eliminarExperiencia(Experiencia* exp){
+    colExperiencias.erase(exp);
+}
