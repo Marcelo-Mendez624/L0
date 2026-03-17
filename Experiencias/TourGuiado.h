@@ -20,3 +20,5 @@ public:
     //Misc
     virtual float calcularCosto();
 };
+
+#endif
