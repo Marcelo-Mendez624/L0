@@ -7,11 +7,13 @@
 #include "Turista.h"
 
 // EXPERIENCIAS
-#include "Experiencia.h"
-#include "Alojamiento.h"
+#include "Experiencias/Experiencia.h"
+#include "Experiencias/EventoCultural.h"
+#include "Experiencias/Alojamiento.h"
+#include "Experiencias/TourGuiado.h"
 
 //  DATA TYPES
-#include "DTFecha.h"
+#include "Data/DTFecha.h"
 #include "Data/Regimen.h"
 
 
@@ -54,7 +56,7 @@ void parte_a()
 
 	DTFecha miFecha(18, 5, 2020);
 
-	TipoRegimen miRegimen = TipoRegimen::AllInclusive;
+	TipoRegimen miRegimen = AllInclusive;
 
 	Alojamiento* alojamiento1 = new Alojamiento(codigo, desc, 30, miFecha, name, miRegimen, 5);
 
@@ -173,12 +175,12 @@ void parte_g(){
 
 void parte_h(){
 	
-	Turista*t = coleccion_getTurista("4.951.278-9");
+	Turista* t = coleccion_getTurista("4.951.278-9");
 	DTFecha desde(10,12, 2023);
 
 	std::set<std::string> res = t->listarExperiencias(desde, 0, 1000);
 	
-	std::map<std::string>::iterator it;
+	std::set<std::string>::iterator it;
 	
 	for(it=res.begin();it!=res.end();++it){
 		 std::cout << *it << std::endl;
@@ -219,8 +221,8 @@ void parte_k(){
   //iterador de listas
    std::list<Experiencia*>::iterator it;
 	
-	 for (it = experiencias.begin(); it != experiencias.end(); it++) {
-		std::cout << (*it)->getDT() << std::endl;
+	for (it = experiencias.begin(); it != experiencias.end(); it++) {
+		std::cout << *((*it)->getDT()) << std::endl;
 	}
 }
 

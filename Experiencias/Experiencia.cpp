@@ -1,5 +1,5 @@
 #include "Experiencia.h"
-#include "Turista.h"
+#include "../Turista/Turista.h"
 #include <iostream>
 #include <ostream>
 

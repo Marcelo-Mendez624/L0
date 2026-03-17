@@ -3,7 +3,7 @@
 
 #include <string>
 #include "Experiencia.h"
-#include "Data/Regimen.h"
+#include "../Data/Regimen.h"
 
 class Alojamiento : public Experiencia 
 {
