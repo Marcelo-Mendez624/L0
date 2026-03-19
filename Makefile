@@ -4,6 +4,7 @@ CXXFLAGS = -std=c++98 -Wall -Wextra -I./Data -I./Experiencias -I./Turista
 #estructura proyecto
 SRCS = main.cpp \
        Data/DTFecha.cpp \
+       Data/DTExpe.cpp \
        Experiencias/Experiencia.cpp \
        Experiencias/Alojamiento.cpp \
        Experiencias/TourGuiado.cpp \

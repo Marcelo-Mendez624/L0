@@ -42,6 +42,7 @@ std::set<std::string> Turista::listarExperiencias(DTFecha desde, float min, floa
                     res.insert((*papafrita)->getCodigoReserva());
         }
     }
+    return res;
 }
 
 //para no romper encapsulamiento

@@ -1,5 +1,4 @@
-#include "DTExperiencia.h"
-#include "DTFecha.h"
+#include "DTExpe.h"
 
     
 DTExpe::DTExpe(std::string cod, std::string desc, DTFecha f, std::set<std::string> turs)

@@ -129,7 +129,7 @@ void parte_d(){
 	std::list<Experiencia*>::iterator pure;
 	
 	for (pure = experiencias.begin(); pure != experiencias.end(); pure++) {
-		std::cout << *pure << std::endl;
+		std::cout << (*pure)->getDT() << std::endl;
 	}
 }
 
@@ -182,8 +182,8 @@ void parte_h(){
 	
 	std::set<std::string>::iterator it;
 	
-	for(it=res.begin();it!=res.end();++it){
-		 std::cout << *it << std::endl;
+	for(it = res.begin(); it != res.end(); ++it){
+		std::cout << *it << std::endl;
 	}
 }
 
@@ -204,23 +204,23 @@ void parte_i(){
 }
 
 void parte_j(){ 
-   Turista*t = coleccion_getTurista("1.535.422-0");
-   DTFecha fecha(10,10,2020);
-   std::set<std::string> lista_exp=t->listarExperiencias(fecha,0,1000);
-  
-   //Iterador de sets
-   std::set<std::string>::iterator it;
+	Turista*t = coleccion_getTurista("1.535.442-0");
+	DTFecha fecha(10,10,2020);
 
-   for (it = lista_exp.begin(); it != lista_exp.end(); ++it) {
-        std::cout << *it << std::endl;
-    }
+	std::set<std::string> lista_exp = t->listarExperiencias(fecha, 0, 1000);	//EXPLOTA, A REVISAR
+
+	std::set<std::string>::iterator it;
+
+	for (it = lista_exp.begin(); it != lista_exp.end(); ++it) {
+		std::cout << *it << std::endl;
+	}
 }
 
 void parte_k(){
-  
-  //iterador de listas
-   std::list<Experiencia*>::iterator it;
-	
+
+	//iterador de listas
+	std::list<Experiencia*>::iterator it;
+
 	for (it = experiencias.begin(); it != experiencias.end(); it++) {
 		std::cout << (*it)->getDT() << std::endl;
 	}

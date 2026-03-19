@@ -6,7 +6,13 @@ TourGuiado::TourGuiado(std::string cod,std::string des, int precio, DTFecha fech
     this->lugaresVisitados=set_lugares;
     
 }
-std::string TourGuiado::getAgencia(){
+
+TourGuiado::~TourGuiado()
+{
+}
+
+std::string TourGuiado::getAgencia()
+{
 
     return this->agencia;
 }
