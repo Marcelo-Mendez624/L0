@@ -19,40 +19,43 @@ std::string Turista::toString()
 
 std::set<std::string> Turista::listarExperiencias(DTFecha desde, float min, float max)
 {
-    std::set<Experiencia*> aux = this->getExperiencias();
     std::set<std::string> res;
     int anioDesde = desde.getAnio();
     int mesDesde = desde.getMes();
     int diaDesde = desde.getDia();
 
-    std::set<Experiencia*>::iterator papafrita;
-    for(papafrita = aux.begin(); papafrita != aux.end(); papafrita++)
+    // Iteramos directamente sobre el atributo de la clase
+    std::set<Experiencia*>::iterator exp;
+    for(exp = this->colExperiencias.begin(); exp != this->colExperiencias.end(); exp++)
     {
-        float costo = (*papafrita)->calcularCosto();
+        float costo = (*exp)->calcularCosto();
         if ((min <= costo) && (costo <= max))
         {
-            DTFecha fecha = ((*papafrita)->getDT()).getFecha();
+            DTFecha fecha = ((*exp)->getDT()).getFecha();
             int anioFecha = fecha.getAnio();
             int mesFecha = fecha.getMes();
             int diaFecha = fecha.getDia();
 
-            if ((anioDesde < anioFecha) ||
-                anioDesde == anioFecha && (mesDesde < mesFecha ||
-                (mesDesde == mesFecha && diaDesde < diaFecha)))
-                    res.insert((*papafrita)->getCodigoReserva());
+            if ((anioDesde < anioFecha) || 
+                (anioDesde == anioFecha && mesDesde < mesFecha) || 
+                (anioDesde == anioFecha && mesDesde == mesFecha && diaDesde <= diaFecha)) 
+            {
+                res.insert((*exp)->getCodigoReserva());
+            }
         }
     }
     return res;
 }
 
-//para no romper encapsulamiento
 void Turista::agregarExperiencia(Experiencia* exp) {
-    if(exp == nullptr) return; 
-    
-    colExperiencias.insert(exp);
-    
+    if(exp != nullptr) {
+        this->colExperiencias.insert(exp);
+        exp->agregarTurista(this);
+    }
 }
 
 void Turista::eliminarExperiencia(Experiencia* exp){
-    colExperiencias.erase(exp);
+    if(exp != nullptr) {
+        this->colExperiencias.erase(exp); // Solo borra localmente para no romper iteradores
+    }
 }

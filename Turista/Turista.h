@@ -2,7 +2,7 @@
 #define TURISTA_H
 
 #include <string>
-#include <../Experiencias/Experiencia.h>
+#include "../Experiencias/Experiencia.h"
 
 
 class Turista

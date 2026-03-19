@@ -17,12 +17,14 @@ std::string TourGuiado::getAgencia()
     return this->agencia;
 }
 
-float TourGuiado::calcularCosto(){
-    int precio_base= this->precioBase;
-    int cant_lugares=this->lugaresVisitados.size();
-    DTExpe exp =this->getDT();
-    int cant_turistas= exp.getTuristas().size();
-    float res= precio_base + 2*cant_lugares*cant_turistas;
+float TourGuiado::calcularCosto()
+{
+    int precio_base = this->precioBase;
+    int cant_lugares = this->lugaresVisitados.size();
+    
+    int cant_turistas = this->colTuristas.size(); 
+    
+    float res = precio_base + 2 * cant_lugares * cant_turistas;
 
-  return res;
+    return res;
 }

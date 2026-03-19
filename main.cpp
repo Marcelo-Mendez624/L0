@@ -207,7 +207,7 @@ void parte_j(){
 	Turista*t = coleccion_getTurista("1.535.442-0");
 	DTFecha fecha(10,10,2020);
 
-	std::set<std::string> lista_exp = t->listarExperiencias(fecha, 0, 1000);	//EXPLOTA, A REVISAR
+	std::set<std::string> lista_exp = t->listarExperiencias(fecha, 0, 1000);	//EXPLOTA, A REVISAR (YA NO)
 
 	std::set<std::string>::iterator it;
 
@@ -227,6 +227,24 @@ void parte_k(){
 }
 
 void cleanUp(){
+	// Limpi de memoria dinámica
+    std::list<Experiencia*>::iterator it_exp;
+    for (it_exp = experiencias.begin(); it_exp != experiencias.end(); ++it_exp) {
+        delete *it_exp; 
+    }
+    // Vaciamos los contenedores globales
+    experiencias.clear();
+    map_experiencias.clear();
+
+    // destruir turistas
+    std::list<Turista*>::iterator it_tur;
+    for (it_tur = turistas.begin(); it_tur != turistas.end(); ++it_tur) {
+        delete *it_tur;
+    }
+    // Vaciamos los contenedores globales
+    turistas.clear();
+    map_turistas.clear();
+
 }
 
 int main() {

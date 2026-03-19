@@ -25,12 +25,10 @@ std::string EventoCultural::getUbicacion(){
     return this->ubicacion;
 }
 
-float EventoCultural::calcularCosto() {
-
-    DTExpe exp = this->getDT();
-    
-    int cantTuristas = exp.getTuristas().size();
-    int precioBase= this->precioBase;
+float EventoCultural::calcularCosto() 
+{
+    int cantTuristas = this->colTuristas.size(); 
+    int precioBase = this->precioBase;
     float costo = precioBase * cantTuristas;
     bool usoCupon = this->getCupon();
 
