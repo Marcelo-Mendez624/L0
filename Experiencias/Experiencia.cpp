@@ -15,7 +15,11 @@ Experiencia::Experiencia(std::string cod, std::string desc, int precio, DTFecha 
 
 Experiencia::~Experiencia()
 {
-
+    for (Turista* t : colTuristas) {
+        t->eliminarExperiencia(this); 
+    }
+    
+    colTuristas.clear();
 }
 
 DTExpe Experiencia::getDT() {

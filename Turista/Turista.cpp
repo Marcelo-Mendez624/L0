@@ -9,7 +9,7 @@ Turista::Turista(std::string ci, std::string nombre, std::string email)
 
 Turista::~Turista()
 {
-
+    this->colExperiencias.clear();
 }
 
 std::string Turista::toString()
@@ -46,7 +46,10 @@ std::set<std::string> Turista::listarExperiencias(DTFecha desde, float min, floa
 
 //para no romper encapsulamiento
 void Turista::agregarExperiencia(Experiencia* exp) {
+    if(exp == nullptr) return; 
+    
     colExperiencias.insert(exp);
+    
 }
 
 void Turista::eliminarExperiencia(Experiencia* exp){
