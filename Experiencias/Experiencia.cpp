@@ -15,8 +15,9 @@ Experiencia::Experiencia(std::string cod, std::string desc, int precio, DTFecha 
 
 Experiencia::~Experiencia()
 {
-    for (Turista* t : colTuristas) {
-        t->eliminarExperiencia(this); 
+    std::set<Turista*>::iterator it;
+    for (it = colTuristas.begin(); it != colTuristas.end(); ++it) {
+        (*it)->eliminarExperiencia(this); 
     }
     
     colTuristas.clear();
