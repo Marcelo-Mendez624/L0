@@ -16,12 +16,12 @@ std::ostream& operator<<(std::ostream& os, const DTExpe& dt) {
        << fecha.getDia() << "/" << fecha.getMes() << "/" << fecha.getAnio() << ")/";
 
     std::set<std::string> turistas = dt.getTuristas();
-    std::set<std::string>::const_iterator milanesa;
+    std::set<std::string>::const_iterator turis;
 
-    for(milanesa = turistas.begin(); milanesa != turistas.end(); milanesa++) {
-        os << (*milanesa);
+    for(turis = turistas.begin(); turis != turistas.end(); turis++) {
+        os << (*turis);
 
-        std::set<std::string>::const_iterator sig = milanesa;
+        std::set<std::string>::const_iterator sig = turis;
         sig++;
         
         if (sig != turistas.end()) {
