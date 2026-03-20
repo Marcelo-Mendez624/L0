@@ -28,6 +28,7 @@ void coleccion_guardarExperiencia(Experiencia* exp){
 	std::pair<std::string, Experiencia*> entry(exp->getCodigoReserva(), exp);
     map_experiencias.insert(entry);
 }
+
 void coleccion_eliminarExperiencia(Experiencia* exp){
 	experiencias.remove(exp);
 	map_experiencias.erase(exp->getCodigoReserva());
@@ -146,10 +147,10 @@ void parte_e(){
 
 void parte_f(){
 
-	std::list<Turista*>::iterator bondiola;
+	std::list<Turista*>::iterator turis;
 
-	for (bondiola = turistas.begin(); bondiola != turistas.end(); bondiola++) {
-		std::cout << (*bondiola)->toString() << std::endl;
+	for (turis = turistas.begin(); turis != turistas.end(); turis++) {
+		std::cout << (*turis)->toString() << std::endl;
 	}
 }
 
