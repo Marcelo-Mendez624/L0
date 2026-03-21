@@ -11,10 +11,10 @@ class Turista;                          //Definida en Turista.h
 class Experiencia
 {
 protected:
-    DTFecha fecha;
-    int precioBase;
-    std::string descripcion;
     std::string codigoReserva;
+    std::string descripcion;
+    int precioBase;
+    DTFecha fecha;
     std::set<Turista*> colTuristas;     //Pseudoatributo/link
 
 public:
