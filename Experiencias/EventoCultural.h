@@ -28,7 +28,7 @@ public:
     std::string getUbicacion(); 
 
     //Misc
-    float calcularCosto () override;  
+    virtual float calcularCosto ();  
 };
 
 #endif

@@ -172,6 +172,13 @@ void parte_g(){
 	(t1->agregarExperiencia(exp4));
 	(t2->agregarExperiencia(exp5));
 	(t2->agregarExperiencia(exp6));
+
+	(exp1->agregarTurista(t1));
+	(exp2->agregarTurista(t1));
+	(exp3->agregarTurista(t1));
+	(exp4->agregarTurista(t1));
+	(exp5->agregarTurista(t2));
+	(exp6->agregarTurista(t2));
 }
 
 void parte_h(){
