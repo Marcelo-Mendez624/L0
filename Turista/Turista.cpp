@@ -48,14 +48,14 @@ std::set<std::string> Turista::listarExperiencias(DTFecha desde, float min, floa
 }
 
 void Turista::agregarExperiencia(Experiencia* exp) {
-    if(exp != nullptr) {
+    if(exp != NULL) {
         this->colExperiencias.insert(exp);
         exp->agregarTurista(this);
     }
 }
 
 void Turista::eliminarExperiencia(Experiencia* exp){
-    if(exp != nullptr) {
+    if(exp != NULL) {
         this->colExperiencias.erase(exp); // Solo borra localmente para no romper iteradores
     }
 }
