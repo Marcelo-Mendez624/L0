@@ -44,4 +44,7 @@ void Experiencia::agregarTurista(Turista *turista)
 void Experiencia::eliminarTurista(Turista *turista)
 {
     colTuristas.erase(turista);
+
+    if(this->colTuristas.empty())
+        this->~Experiencia();
 }
