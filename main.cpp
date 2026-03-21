@@ -128,10 +128,10 @@ void parte_c(){
 void parte_d(){
 
 	// Iterador para listas
-	std::list<Experiencia*>::iterator pure;
+	std::list<Experiencia*>::iterator it_exp;
 	
-	for (pure = experiencias.begin(); pure != experiencias.end(); pure++) {
-		std::cout << (*pure)->getDT() << std::endl;
+	for (it_exp = experiencias.begin(); it_exp != experiencias.end(); it_exp++) {
+		std::cout << (*it_exp)->getDT() << std::endl;
 	}
 }
 
