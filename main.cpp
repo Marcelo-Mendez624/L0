@@ -4,6 +4,7 @@
 #include <string>
 #include <set>
 
+// TURISTAS
 #include "Turista.h"
 
 // EXPERIENCIAS
@@ -235,7 +236,7 @@ void parte_k(){
 }
 
 void cleanUp(){
-	// Limpi de memoria dinámica
+	// Limpieza de memoria dinámica
     std::list<Experiencia*>::iterator it_exp;
     for (it_exp = experiencias.begin(); it_exp != experiencias.end(); ++it_exp) {
         delete *it_exp; 
@@ -252,7 +253,6 @@ void cleanUp(){
     // Vaciamos los contenedores globales
     turistas.clear();
     map_turistas.clear();
-
 }
 
 int main() {
